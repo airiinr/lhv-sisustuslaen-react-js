@@ -1,0 +1,73 @@
+.inputFields {
+	display: flex;
+	position: relative;
+	justify-content: space-between;
+	margin-top: 8px;
+}
+
+.productName,
+.productPrice,
+.productName:focus,
+.productPrice:focus {
+	height: 28px;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 24px;
+	text-align: left;
+	text-transform: capitalize;
+	border: none;
+	background-color: #f1edeb;
+}
+
+.productName {
+	width: 155px;
+	border-bottom: 1px solid #c6c4c7;
+}
+
+.productPrice {
+	width: 142px;
+}
+
+.priceLabel {
+	border-bottom: 1px solid #c6c4c7;
+	color: #89868d;
+}
+
+.inputFields .tooltiptext {
+	visibility: hidden;
+	width: 132px;
+	text-align: center;
+	padding: 5px 0;
+	position: absolute;
+	z-index: 1;
+	bottom: 90%;
+	left: 62%;
+	font-size: 11px;
+	opacity: 0;
+	transition: opacity 0.3s;
+}
+
+.tooltiptext.showError {
+	visibility: visible;
+	opacity: 1;
+	color: red;
+}
+
+@media (min-width: 376px) {
+	.inputFields {
+		margin-top: 16px;
+	}
+
+	.productName {
+		width: 212px;
+	}
+
+	.productPrice {
+		width: 120px;
+	}
+
+	.inputFields .tooltiptext {
+		left: 64%;
+		font-size: 12px;
+	}
+}

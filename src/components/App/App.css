@@ -1,0 +1,25 @@
+.appContainer {
+	width: fit-content;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin: 0 0 0;
+	background: #ffffff;
+	color: #262633;
+}
+
+.pageTitle {
+	height: 34px;
+	margin-top: 40px;
+	font-weight: 300;
+	font-size: 28px;
+	line-height: 34px;
+	letter-spacing: -0.5px;
+	text-align: center;
+}
+
+@media (min-width: 376px) {
+	.appContainer {
+		margin: 214px auto 0;
+	}
+}

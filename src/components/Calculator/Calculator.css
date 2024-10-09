@@ -1,0 +1,207 @@
+@property --buttonColor1 {
+	syntax: "<color>";
+	initial-value: #3b3b47;
+	inherits: false;
+}
+
+@property --buttonColor2 {
+	syntax: "<color>";
+	initial-value: #3b3b47;
+	inherits: false;
+}
+
+.calculatorContainer {
+	min-width: fit-content;
+	height: auto;
+	padding: 40px 24px;
+	background-color: #f1edeb;
+}
+
+.calculatorTitle {
+	width: 327px;
+	height: 103px;
+	font-weight: 300;
+	font-size: 28px;
+	line-height: 34px;
+	letter-spacing: -0.5px;
+	text-align: center;
+}
+
+.calculatorTitle > span {
+	font-weight: 700;
+}
+
+.calculator {
+	width: 327px;
+	height: auto;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	margin-top: 40px;
+}
+
+.calculatorLeft {
+	width: 327px;
+	height: auto;
+}
+
+.titleContainer {
+	display: flex;
+	justify-content: space-between;
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 18px;
+	text-transform: uppercase;
+	text-align: left;
+	color: #89868d;
+}
+
+.productNameTitle,
+.productPriceTitle {
+	width: 155.5px;
+	height: 18px;
+}
+
+.buttonsContainer {
+	width: inherit;
+	height: 24px;
+	display: flex;
+	justify-content: space-between;
+	margin-top: 8px;
+}
+
+.calculatorRight {
+	width: 327px;
+	height: 160px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 40px;
+}
+
+.totalPrice {
+	height: 48px;
+	margin-bottom: 24px;
+	font-weight: 200;
+	font-size: 45px;
+	line-height: 48px;
+	letter-spacing: -1.5px;
+	text-align: center;
+}
+
+.loanButton {
+	width: inherit;
+	height: 48px;
+	padding: 0px 16px;
+	border-radius: 4px;
+	border: none;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 20px;
+	background: linear-gradient(
+		90deg,
+		var(--buttonColor1) 0%,
+		var(--buttonColor2) 100%
+	);
+	transition: --buttonColor1 500ms, --buttonColor2 500ms;
+	color: #ffffff;
+}
+
+.loanButton:hover {
+	--buttonColor1: #1a5168;
+	--buttonColor2: #4ab4bb;
+	cursor: pointer;
+}
+
+.termsAndConditions {
+	width: 135px;
+	height: 37px;
+	display: flex;
+	justify-content: center;
+	align-items: end;
+	padding: 8px 8px 2px;
+}
+
+.termsAndConditionsLink {
+	position: relative;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 20px;
+	text-decoration: underline;
+	text-decoration-thickness: 1.5px;
+	text-underline-offset: 4px;
+	color: #6c6972;
+	cursor: default;
+}
+
+.termsAndConditionsLink:hover {
+	color: #262633;
+	text-decoration: none;
+}
+
+.termsAndConditionsLink::before {
+	content: "";
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 1.5px;
+	bottom: 0;
+	left: 0;
+	background-color: #262633;
+	transform: scaleX(0);
+	transform-origin: top left;
+	transition: transform 0.5s ease;
+}
+
+.termsAndConditionsLink:hover::before {
+	transform: scaleX(1);
+}
+
+@media (min-width: 376px) {
+	.calculatorContainer {
+		margin-top: 123px;
+		padding: 60px 164px;
+		border-radius: 4px;
+	}
+
+	.calculatorTitle {
+		width: 456.3px;
+		height: 69px;
+		padding: 0 78.85px;
+	}
+
+	.calculator {
+		width: 617px;
+		min-height: 160px;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	.calculatorLeft {
+		width: 374px;
+	}
+
+	.productNameTitle {
+		width: 212px;
+		height: 18px;
+	}
+
+	.productPriceTitle {
+		width: 132px;
+		height: 18px;
+	}
+
+	.buttonsContainer {
+		margin-top: 16px;
+	}
+
+	.calculatorRight {
+		width: fit-content;
+		height: 160px;
+		margin-top: 0;
+	}
+
+	.loanButton {
+		width: 163px;
+	}
+}

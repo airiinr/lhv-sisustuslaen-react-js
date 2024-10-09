@@ -1,0 +1,150 @@
+.footerContainer {
+	width: 375px;
+	height: 334px;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	margin: 48px 0 27px 0;
+}
+
+.support {
+	width: 320px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.supportIcon {
+	width: 80px;
+	height: 80px;
+	margin: 0 0 24px;
+}
+
+.supportText {
+	width: inherit;
+	text-align: center;
+}
+
+.supportTextContent {
+	width: 320px;
+	height: 72px;
+	margin-top: 48px;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 24px;
+	text-align: center;
+}
+
+.supportTitle {
+	width: inherit;
+	height: 26px;
+	font-weight: 300;
+	font-size: 22px;
+	line-height: 26px;
+}
+
+.supportTitle > span {
+	font-weight: 700;
+}
+
+.contact {
+	width: 320px;
+	height: 27px;
+	display: flex;
+	flex-direction: column;
+	margin: 24px 0 48px;
+	font-weight: 300;
+}
+
+.contactPhone,
+.contactEmail {
+	width: inherit;
+	height: 27px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.contactPhone {
+	margin-bottom: 16px;
+}
+
+.callIcon,
+.draftsIcon {
+	width: 24px;
+	height: 24px;
+	padding-right: 16px;
+}
+
+.contactPhoneNumber,
+.contactEmailAddress {
+	width: auto;
+	height: 27px;
+	font-size: 22px;
+	line-height: 26.6px;
+	cursor: default;
+}
+
+@media (min-width: 376px) {
+	.footerContainer {
+		width: min-content;
+		height: auto;
+		flex-direction: row;
+		justify-content: space-between;
+		margin: 60px 0 0 0;
+		padding: 60px 0;
+	}
+
+	.support {
+		width: 456px;
+		height: 114px;
+		flex-direction: row;
+		margin-right: 30px;
+	}
+
+	.supportIcon {
+		margin: 0 24px 0 0;
+	}
+
+	.supportText {
+		width: 352px;
+		height: 114px;
+	}
+
+	.supportTitle,
+	.supportTextContent {
+		text-align: left;
+	}
+
+	.supportTextContent {
+		margin-top: 16px;
+	}
+
+	.contact {
+		width: 456px;
+		flex-direction: row;
+		align-items: center;
+		align-self: center;
+		justify-content: space-between;
+		margin: 0 0 0;
+	}
+
+	.contactPhone,
+	.contactEmail {
+		width: 204px;
+		margin-bottom: 0;
+	}
+
+	.contactEmail {
+		justify-content: flex-start;
+	}
+
+	.contactPhone {
+		justify-content: flex-end;
+	}
+
+	.contactPhoneNumber,
+	.contactEmailAddress {
+		width: 98px;
+	}
+}
