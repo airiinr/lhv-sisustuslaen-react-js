@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const useCheckMobileScreen = () => {
+export const useCheckMobileScreen = () => {
 	const [width, setWidth] = useState(window.innerWidth);
 	const handleWindowSizeChange = () => {
 		setWidth(window.innerWidth);
@@ -22,4 +22,6 @@ const useCheckMobileScreen = () => {
 	return width <= 375;
 };
 
-export default useCheckMobileScreen;
+export const scrollToSection = (ref) => {
+	ref?.current?.scrollIntoView();
+};

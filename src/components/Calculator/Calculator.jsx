@@ -15,7 +15,8 @@ const calculatorContent = {
 };
 
 const Calculator = () => {
-	const { products, setProducts } = useGlobalContext();
+	const { products, setProducts, calculatorRef } =
+		useGlobalContext();
 	const [totalPrice, setTotalPrice] = useState(0);
 
 	// functionality to add one row at a time
@@ -67,8 +68,8 @@ const Calculator = () => {
 
 	return (
 		<div
-			id='calculator'
-			className='calculatorContainer'>
+			className='calculatorContainer'
+			ref={calculatorRef}>
 			<h2 className='calculatorTitle'>
 				<span>{calculatorContent.titleOne} </span>
 				{calculatorContent.titleTwo}

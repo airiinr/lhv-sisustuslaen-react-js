@@ -1,4 +1,4 @@
-import useCheckMobileScreen from "../../utils/utils";
+import { useCheckMobileScreen } from "../../utils/utils";
 
 const footerContent = {
 	titleOne: "LHV",

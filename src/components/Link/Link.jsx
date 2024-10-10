@@ -1,11 +1,9 @@
 import PropTypes from "prop-types";
 
-const Link = ({ content, variant, href, onClick }) => {
+const Link = ({ content, variant, onClick }) => {
 	return (
 		<div className={`linkContainer ${variant}`}>
-			<a
-				href={href}
-				onClick={onClick ? () => onClick() : null}>
+			<a onClick={onClick ? () => onClick() : null}>
 				<div className={`linkWithIcon ${variant}`}>
 					<p className='linkContent'>{content}</p>
 					<img

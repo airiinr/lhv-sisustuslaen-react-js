@@ -1,6 +1,10 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
-import useCheckMobileScreen from "../../utils/utils";
+import {
+	useCheckMobileScreen,
+	scrollToSection,
+} from "../../utils/utils";
+import { useGlobalContext } from "../../hooks/useContext";
 import Link from "../Link/Link";
 
 const bannerContent = {
@@ -11,6 +15,7 @@ const bannerContent = {
 };
 
 const BannerContentContainer = () => {
+	const { calculatorRef } = useGlobalContext();
 	return (
 		<div className='bannerContentContainer'>
 			<p className='bannerContent'>
@@ -19,7 +24,7 @@ const BannerContentContainer = () => {
 			<Link
 				content={bannerContent.linkTitle}
 				variant='arrow'
-				href='#calculator'
+				onClick={() => scrollToSection(calculatorRef)}
 			/>
 		</div>
 	);

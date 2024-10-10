@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { GlobalContext } from "../../hooks/useContext";
-import useCheckMobileScreen from "../../utils/utils";
+import { useCheckMobileScreen } from "../../utils/utils";
 import Banner from "../Banner/Banner";
 import Calculator from "../Calculator/Calculator";
 import Footer from "../Footer/Footer";
@@ -11,6 +11,7 @@ const App = () => {
 	const [products, setProducts] = useState([
 		{ productName: "", productPrice: 0 },
 	]);
+	const calculatorRef = useRef(null);
 
 	const isMobile = useCheckMobileScreen();
 
@@ -19,6 +20,7 @@ const App = () => {
 			value={{
 				products,
 				setProducts,
+				calculatorRef,
 			}}>
 			<div className='appContainer'>
 				{isMobile ? (
